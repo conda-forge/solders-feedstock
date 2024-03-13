@@ -1,5 +1,5 @@
 {% set name = "solders" %}
-{% set version = "0.20.0" %}
+{% set version = "0.21.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://github.com/kevinheavey/solders/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 96e687a50f27ccf6d18f134f1d41fffbe876841c85fb753d80c917ade47a7d80
+  sha256: d13b76d163b2807ee7b4386afe13d58f251a46e198cdcc28b62eb47e16b1d518
 
 build:
   script:
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
     - {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 0
 
 requirements:
   build:
