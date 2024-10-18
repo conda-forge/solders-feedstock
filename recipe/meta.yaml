@@ -1,5 +1,5 @@
 {% set name = "solders" %}
-{% set version = "0.21.0" %}
+{% set version = "0.22.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/kevinheavey/solders/archive/refs/tags/{{ version }}.tar.gz
-  sha256: d13b76d163b2807ee7b4386afe13d58f251a46e198cdcc28b62eb47e16b1d518
+  sha256: 63a5c5827987aa0c5133cb95e3035771be78a305a0dc1e4c7acb74503b33f1f5
 
 build:
   script:
@@ -18,6 +18,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('rust') }}
     - cargo-bundle-licenses
   host:
@@ -30,7 +31,6 @@ requirements:
     - jsonalias =0.1.1
     - python
     - typing_extensions
-    - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx and x86_64]
 
 test:
   imports:
