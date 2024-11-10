@@ -1,5 +1,5 @@
 {% set name = "solders" %}
-{% set version = "0.22.0" %}
+{% set version = "0.23.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/kevinheavey/solders/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 63a5c5827987aa0c5133cb95e3035771be78a305a0dc1e4c7acb74503b33f1f5
+  sha256: c427b1875005696d97ee91d9a5f8ee378e0593f358fce7ea6433c2a6a5fb0f74
 
 build:
   script:
