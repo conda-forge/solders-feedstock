@@ -23,6 +23,7 @@ requirements:
     - cargo-bundle-licenses
     - make  # [unix]
     - m2-make  # [not unix]
+    - perl  # [not unix]
   host:
     - maturin >=1.8.1,<1.9
     - poetry
